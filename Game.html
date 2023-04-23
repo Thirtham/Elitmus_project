@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Game</title>
+<link rel="icon" type="image/ico" href="{{url_for('static', filename = 'favicon.ico') }}">
+</head>
+<style>
+	body {
+		background-color:rgba(251, 238, 222, 0.361);
+		background-repeat: no-repeat;
+		background-size: 40%;
+		background-position: right;
+		border-style: solid;
+		border-color: lightblue;
+		border-width: 10px;
+		padding: 0% 3%;
+	}
+	.row{
+		display: block;
+		background-image: linear-gradient(to right,rgba(245, 147, 62, 0.432),lightcyan);
+		width: 90%;
+		padding: 5%;
+		border-style:hidden;
+		border-width: 1px;
+		border-radius: 2%;
+	}
+</style>
+
+<body>
+	<center>
+		<h1>TEST YOUR SOFT SKILLS</h1>
+	</center>
+	<form action="{{url_for('game')}}"  method="post">
+		<div class="row">
+				<div class="col-25">
+					<label for="user" style="font-size: large;"><b>QUESTION 1: Two students are sitting on opposite sides of the same
+						desk. There is nothing in between them but the desk.Why can't they see each other?</b><br>
+						<sub><b>
+							HINT: Think about the position of the students in relation to the desk.</b><br>
+						</sub>
+						<br>
+				</div>
+				<div class="col-75">
+					<input type="radio" id="" name="wrong" value="0">
+					<label for="">The desk is made of a special material that blocks visibility.</label><br><br>
+					<input type="radio" id="" name="wrong" value="0">
+					<label for="">The desk is very high and the students are very short.</label><br><br>
+					<input type="radio" id="" name="wrong" value="0">
+					<label for="">The students are both blind.</label><br><br>
+					<input type="radio" id="" name="answer1" value="1">
+					<label for="">The students are facing opposite directions, and therefore, they cannot see each other.</label><br><br>
+				</div>
+		</div>
+		<br>
+		<div class="row">
+				<div class="col-25">
+					<label for="user"style="font-size: large;"><b>QUESTION 2: In a certain code language, '526' means 'sky is blue' ; '24' 
+						means 'blue colour' and '436' means 'colour is fun'. Which 
+						digit in that language means 'fun'?</b></label><br>
+					<img src="" alt="">
+
+					<sub><b>HINT : You need to identify which digit appears only in the code for 'colour is fun' and not in the other codes.</b></sub><br><br>
+				</div>
+				<div class="col-75">
+					<input type="radio" id="" name="wrong" value="0">
+					<label for="">5</label><br><br>
+					<input type="radio" id="" name="wrong" value="0">
+					<label for="">4</label><br><br>
+					<input type="radio" id="" name="answer2" value="1">
+					<label for="">3</label><br><br>
+					<input type="radio" id="" name="wrong" value="0">
+					<label for="">2</label><br><br>
+				</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-25">
+				<label for="user" style="font-size: large;"><b>QUESTION 3: How do you stay organized and focused in the workplace?</b>
+				</label><br>
+				<img src="" alt="">
+
+				<sub><b>HINT : You need to identify which digit appears only in the code for 'colour is fun' and not in the other codes.</b></sub><br><br>
+			</div>
+			<div class="col-75">
+				<input type="radio" id="" name="wrong" value="0">
+				<label for=""> Multitasking and juggling multiple tasks at once</label><br><br>
+				<input type="radio" id="" name="wrong" value="0">
+				<label for="">Ignoring deadlines and prioritizing less important tasks</label><br><br>
+				<input type="radio" id="" name="answer3" value="1">
+				<label for="">Setting clear priorities and deadlines, and focusing on one task at a time</label><br><br>
+				<input type="radio" id="" name="wrong" value="0">
+				<label for="">Not doing anything at all.</label><br><br>
+			</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-25">
+			<label for="user" style="font-size: large;"><b>QUESTION 4: Which of the following statements is true regarding communication?</b></label><br>
+			
+
+			<sub><b>HINT : Communication is about not only about talking but also about listening.</b></sub><br><br>
+		</div>
+		<div class="col-75">
+			<input type="radio" id="" name="wrong" value="0">
+			<label for="">Communication is a one-way process.</label><br><br>
+			<input type="radio" id="" name="answer4" value="1">
+			<label for=""> Communication is a two-way process.</label><br><br>
+			<input type="radio" id="" name="wrong" value="0">
+			<label for="">Communication can be both one-way and two-way.</label><br><br>
+			<input type="radio" id="" name="wrong" value="0">
+			<label for="">Communication doesn't involve any feedback.</label><br><br>
+		</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-25">
+		<label for="user" style="font-size: large;"><b>QUESTION 5: Solve the below Rebuz puzzle</b></label><br>
+		<img src="{{url_for('static', filename = 'images/question.png') }}"><br>
+
+		<sub><b>HINT : Observe the each word and their positions</b></sub><br><br>
+	</div>
+	<div class="col-75">
+		<input type="radio" id="" name="answer5" value="1">
+		<label for="">look both ways before you cross the street.</label><br><br>
+		<input type="radio" id="" name="wrong" value="0">
+		<label for="">look up and down.</label><br><br>
+		<input type="radio" id="" name="wrong" value="0">
+		<label for="">look at all the sides while walking</label><br><br>
+		<input type="radio" id="" name="wrong" value="0">
+		<label for="">close your eyes and walk without looking</label><br>
+	</div>
+</div> 
+<br>
+ <center>
+			<div class="class">
+			<input type="submit" name="submit" style="margin: 0 auto; padding: 5px;" value="Submit Answers">
+				</div>
+				</center>
+	</form>
+</body>
+</html>

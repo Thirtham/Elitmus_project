@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		h1{
+			font-size: 50px;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url('https://img.freepik.com/free-photo/top-view-back-school-supplies-with-notebook-magnifying-glass_23-2148587151.jpg?w=1060&t=st=1682268060~exp=1682268660~hmac=214547d2cf6f96876ff8d46d6f189ff7dfc2e024d2145eccf8132e2cc4869d82');
+			background-color: #f1f1f1;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+		}
+
+		.score {
+			font-size: 24px;
+			color: #333;
+			margin-top: 170px;
+			margin-left: 200px;
+			display: block;
+			width: fit-content;
+			background-color: rgba(13, 14, 14, 0.104);
+			border-radius: 10%;
+			padding: 3%;
+		}
+		
+		button {
+			background-color: indianred;
+			color: white;
+			padding: 14px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			margin-top: 30px;
+			margin-left: 200px;
+			font-size: 18px;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+<meta charset="utf-8">
+<title>Score</title>
+<link rel="icon" type="image/ico" href="{{url_for('static', filename = 'favicon.ico') }}">
+</head>
+
+<body>
+	<h1>Softify</h1>
+	<center>
+	<div class="score">
+		<h2>You have completed this assessment!<br>Hope you did well on the quiz!!</h2>
+		<h4>Your score report is presented here.</h4>
+	<p>Your Score : {{score}} 
+	<br>Time Taken : {{time}}</p>
+	</div>
+	</center>
+	<button><a href="/">Play Again</a></button>
+</body>
+</html>
+
